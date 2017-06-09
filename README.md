@@ -46,32 +46,36 @@ Open the `src/App.js` and replace it with this:
 
 ```
 import React, { Component } from "react";
-import { Card } from "@oreilly/shape-react-core";
+import { SafariChrome } from "@oreilly/shape-react-core";
+
+import "@oreilly/shape-react-core/index.css";
+import "@oreilly/shape-css/grid.css";
+
+const user = {
+  user_type: "Trial",
+  user_identifier: "f38ee9b3-06f5-468a-a245-000000000000",
+  primary_account: "b70baefa-e8ed-44ca-8a6e-111111111111",
+  username: "odewahn",
+  first_name: "Andrew",
+  last_name: "Odewahn",
+  salesforce_id: "foobar",
+  permissions: {
+    view_full_epub: true,
+    view_collections: false
+  }
+};
 
 export default class MyUserInfo extends Component {
   render() {
     return (
-      <Card
-        title="UX Strategy: How to Devise Innovative Digital Products that People Want"
-        uri="https://www.safaribooksonline.com/library/view/ux-strategy/9781449372972/"
-        coverUri="https://www.safaribooksonline.com/library/cover/9781449372972/600w/"
-        format="book"
-        authors={[{ name: "Barrett Austin Clark" }]}
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel porttitor enim. Donec ultricies massa sed."
-        bottomMatter="Total Views: 1,000"
-      />
+      <SafariChrome user={user}>
+        <h1>
+          Welcome, {user.first_name} {user.last_name}
+        </h1>
+      </SafariChrome>
     );
   }
 }
-```
-
-## Replace `src/App.css`
-
-Open the `src/App.css` and replace it with this:
-
-```
-@import '@oreilly/shape-react-core/index.css';
-@import '@oreilly/shape-css/grid.css';
 ```
 
 ## Run `npm start`
