@@ -9,7 +9,7 @@ npm install -g create-react-app
 ## Create a new app
 
 ```
-create-react-app twitch-for-jupyter
+create-react-app cra-vsg-test
 ```
 
 Then cd into the new directory.
@@ -35,7 +35,7 @@ You can tweak the locations:
 Once you're set up, install the packages.  Be sure to include the `@oreilly` namespace so that `nom` picks up the internal registry:
 
 ```
-npm install --save-dev @oreilly/shape-react-core @oreilly/shape-css @oreilly/shape-grid
+npm install --save-dev @oreilly/shape-react-core @oreilly/shape-css
 ```
 
 ## Replace `src/App.js` content
@@ -68,6 +68,9 @@ Open the `src/App.css` and replace it with this:
 @import '@oreilly/shape-css/grid.css';
 ```
 
+## Run `npm start`
+
+Run `npm start` and you should see something gooooood.
 
 
 # Create-React-App boilerplate
