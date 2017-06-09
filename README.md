@@ -1,4 +1,6 @@
-# Process Notes
+# Starting a new app with `create-react-app`
+
+[create-react-app](https://github.com/facebookincubator/create-react-app) is a tool from facebook that let's you "create React apps with no build configuration."  Baically, it's an opinioated way to structure your projects and tools.
 
 ## Install `create-react-app`
 
