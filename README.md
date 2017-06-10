@@ -69,9 +69,7 @@ export default class MyUserInfo extends Component {
   render() {
     return (
       <SafariChrome user={user}>
-        <h1>
-          Welcome, {user.first_name} {user.last_name}
-        </h1>
+        <iframe src="http://jupyterhub.odewahn.com"></iframe>
       </SafariChrome>
     );
   }
@@ -81,3 +79,15 @@ export default class MyUserInfo extends Component {
 ## Run `npm start`
 
 Run `npm start` and you should see something gooooood.
+
+## Proxying to a backend
+
+See this article https://daveceddia.com/create-react-app-express-backend/
+
+Add this to the `package.json`:
+
+```
+  "proxy": "http://localhost:3001"
+```
+
+Then you run the service you want to proxy to on some other port (or even do it remotely).

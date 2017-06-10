@@ -22,9 +22,27 @@ export default class MyUserInfo extends Component {
   render() {
     return (
       <SafariChrome user={user}>
-        <h1>
-          Welcome, {user.first_name} {user.last_name}
-        </h1>
+        <div className="row" style={{ padding: "20px" }}>
+          <div className="col-4">
+            <iframe
+              width="100%"
+              height="280px"
+              src="https://www.youtube.com/embed/EuWDz2Vb1Io"
+              frameborder="0"
+              allowfullscreen
+            />
+          </div>
+          <div className="col-8">
+            <iframe
+              src="http://beta.mybinder.org/v2/gh/choldgraf/zero-to-jupyterhub-k8s/cost_demo"
+              style={{
+                width: "100%",
+                height: "800px",
+                border: "1px solid white"
+              }}
+            />
+          </div>
+        </div>
       </SafariChrome>
     );
   }
